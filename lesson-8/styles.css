@@ -1,8 +1,11 @@
+/* add your CSS here */
+
 :root {
     --light-tan: #f7f2c1;
     --dark-tan: #f0ca6d;
     --green: #48ba95;
     --brown: #403321;
+    --light-brown: #9E7E52;
 }
 
 body {
@@ -12,15 +15,15 @@ body {
 .card {
     font-family: "Lato", sans-serif;
     font-size: .8em;
-    border: 1px solid black;
+    border: 2px solid var(--dark-tan);
     width: 300px;
-    padding: 20px;
     background-color: var(--brown);
+    padding: 15px;
 }
 
 .card-title {
     font-family: "Lobster Two", cursive;
-    color: var(--green);
+    color: var(--dark-tan);
     font-size: 2em;
     font-weight: 700;
     text-align: center;
@@ -28,15 +31,22 @@ body {
     margin-bottom: 20px;
 }
 
-/* add your CSS here */
 .card-photo {
     width: 300px;
+    height: 275px;
 }
 
-.card-facts {
+.img-caption {
     font-style: italic;
     text-align: center;
     color: var(--dark-tan);
+}
+
+.card-facts {
+    border: 1px solid var(--light-brown);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .card-stats {
@@ -45,22 +55,27 @@ body {
     color: var(--light-tan);
 }
 
+li span {
+    color: var(--green);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
 .card-descript {
     text-align: justify;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: var(--light-tan);
 }
 
 a {
+    color: var(--dark-tan);
     text-decoration: none;
-    color: var(--dark-tan); 
 }
 
 a:hover {
-    color: var(--green); 
+    color: var(--light-brown);
 }
 
-li span {
-    color: var(--green);
-    font-weight: bold;
+p {
+    margin: 0px;
 }
