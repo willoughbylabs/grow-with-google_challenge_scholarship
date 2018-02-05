@@ -51,7 +51,7 @@ body {
     margin-top: 10px;
 }
 
-.card-stats {
+.stats-list {
     list-style-type: none;
     padding: 0;
     color: var(--light-tan);
@@ -63,7 +63,7 @@ li span {
     letter-spacing: 1px;
 }
 
-.card-descript {
+.stats-descript {
     text-align: justify;
     margin-bottom: 10px;
     color: var(--light-tan);
