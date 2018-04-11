@@ -1,6 +1,10 @@
+// Select color input
+const colorPicker = $('#colorPicker');
+// Select size input
+const sizePicker = $('#sizePicker');
 // Execute script after page loads
 $(function() {
-    $('#sizePicker').on('submit', function(event) {
+    sizePicker.on('submit', function(event) {
         // Clear the current grid
         $('#pixelCanvas').children().remove();
         // When size is submitted by the user, call makeGrid()
@@ -26,7 +30,7 @@ $(function() {
     }
     // Set pixel color on click based on user selection
    $('#pixelCanvas').on('click', 'td', function() {
-        let pixelColor = $('#colorPicker').val();
+        let pixelColor = $(colorPicker).val();
         $(this).css('background-color', pixelColor);
     })
 })
