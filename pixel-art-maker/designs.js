@@ -17,12 +17,14 @@ $(function() {
         let gridWidth = $('#inputWidth').val();
 
     // loop through grid values to create rows and cells
-        for (var i = 1; i <= gridHeight; i++) {
-            $('#pixelCanvas').append('<tr></tr>')
-        };
+    let i = 0;
+    while (i < gridHeight) {
+        $('#pixelCanvas').append('<tr></tr>');
+        i++;
+    }
         for (var j = 0; j < gridWidth; j++) {
             $('tr').append('<td></td>');
-        };
-    }
+       }
+   }
 })
 
