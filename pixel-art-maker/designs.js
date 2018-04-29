@@ -4,13 +4,25 @@ const colorPicker = $('#colorPicker');
 const sizePicker = $('#sizePicker');
 // Execute script after page loads
 $(function() {
+
     sizePicker.on('submit', function(event) {
         // Clear the current grid
-        $('#pixelCanvas').children().remove();
+        clearGrid();
         // When size is submitted by the user, call makeGrid()
         makeGrid();
         // Prevent form submission from refreshing page and clearing grid
         event.preventDefault();
+    });
+
+    $('#clearGrid').on('click', function() {
+        clearGrid();
+        makeGrid();
+    });
+
+    // Set pixel color on click based on user selection
+   $('#pixelCanvas').on('click', 'td', function() {
+        let pixelColor = $(colorPicker).val();
+        $(this).css('background-color', pixelColor);
     });
 
     function makeGrid() {
@@ -23,15 +35,15 @@ $(function() {
         while (i < gridHeight) {
             $('#pixelCanvas').append('<tr></tr>');
             i++;
-        };
+        }
             for (var j = 0; j < gridWidth; j++) {
                 $('tr').append('<td></td>');
-            };
+                $('td').css('background-color', '#ffffff');
+            }
     }
-    // Set pixel color on click based on user selection
-   $('#pixelCanvas').on('click', 'td', function() {
-        let pixelColor = $(colorPicker).val();
-        $(this).css('background-color', pixelColor);
-    })
-})
+    // Clear the grid
+    function clearGrid() {
+        $('#pixelCanvas').children().remove();
+    }
+});
 

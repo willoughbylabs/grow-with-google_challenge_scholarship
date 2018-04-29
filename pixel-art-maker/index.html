@@ -2,27 +2,29 @@
 <html>
 <head>
     <title>Lite-Brite 2.0</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton|Gugi|Righteous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lite-Brite 2.0</h1>
-    <h2>Digital Pixel Art Maker</h2>
+    <h1>Lite-Brite <span>2.0</span><span>Digital Pixel Art Maker</span></h1>
 
-    <h3>Choose Grid Size</h3>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit" value="Make Grid">
-    </form>
+<div id="canvas">
+        <h3>Choose Grid Size</h3>
+        <form id="sizePicker">
+            <input type="button" id = "clearGrid" value="Clear Grid">
+            Grid Height:
+            <input type="number" id="inputHeight" name="height" min="1" value="1">
+            Grid Width:
+            <input type="number" id="inputWidth" name="width" min="1" value="1">
+            <input type="submit" value="Make Grid">
+        </form>
 
-    <h3>Pick A Color</h3>
-    <input type="color" id="colorPicker">
+        <h3>Pick A Color</h3>
+        <input type="color" id="colorPicker">
 
-    <h3>Design Canvas</h3>
-    <table id="pixelCanvas"></table>
+        <h3>Design Canvas</h3>
+        <table id="pixelCanvas"></table>
+</div>
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
